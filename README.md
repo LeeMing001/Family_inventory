@@ -56,7 +56,7 @@ cd backend
 python -m uvicorn main:app --host 0.0.0.0 --port 5001
 
 # 前端
-pnpm dev --port 5000 --host
+npm run dev
 ```
 
 服务启动后：
@@ -164,7 +164,7 @@ pip install -r requirements.txt
 
 ```bash
 # 构建前端
-pnpm run build
+npm run build
 
 # 生产环境运行
 python -m uvicorn main:app --host 0.0.0.0 --port 5000
