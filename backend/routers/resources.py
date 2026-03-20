@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..database import get_db
-from ..models import User, RoomMember, Room, Resource
-from ..schemas import ResourceCreate, ResourceUpdate, ResourceResponse, ResourceWithChildren
+from database import get_db
+from models import User, RoomMember, Room, Resource
+from schemas import ResourceCreate, ResourceUpdate, ResourceResponse, ResourceWithChildren
 from auth import get_current_user
 from typing import List, Optional
 

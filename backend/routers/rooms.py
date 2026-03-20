@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..database import get_db
-from ..models import User, Room, RoomMember
-from ..schemas import RoomCreate, RoomResponse, RoomJoin, RoomMemberResponse
-from ..auth import get_current_user, generate_room_code
+from database import get_db
+from models import User, Room, RoomMember
+from schemas import RoomCreate, RoomResponse, RoomJoin, RoomMemberResponse
+from auth import get_current_user, generate_room_code
 from typing import List
 
 router = APIRouter(prefix="/api/rooms", tags=["房间"])
