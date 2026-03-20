@@ -1,0 +1,11 @@
+[project]
+entrypoint = "index.html"
+requires = ["nodejs-24", "python-3.12"]
+
+[dev]
+build = ["sh", "-c", "pnpm install && cd backend && pip install -q -r requirements.txt"]
+run = ["sh", "/workspace/projects/family-inventory-system/.homeproj/start-dev.sh"]
+
+[deploy]
+build = ["sh", "-c", "pnpm run build && cd backend && pip install -q -r requirements.txt"]
+run = ["sh", "-c", "cd backend && python -m uvicorn main:app --host 0.0.0.0 --port 5000"]
