@@ -25,6 +25,7 @@ src/__pycache__/
 .cache
 coverage
 storybook-static
+**/config.py
 
 # Package manager artifacts
 pnpm-lock.yaml
